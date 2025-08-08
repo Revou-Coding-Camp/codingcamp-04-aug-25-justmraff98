@@ -3,34 +3,44 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Todo List</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="/Style/style.css">
 </head>
 
 <body>
-    <div class="container">
-        <header>
-            <h1>Todo List</h1>
-        </header>
 
-        <form id="new-task-form">
-            <input type="text" id="task-input" placeholder="Masukkan tugas..." required>
-            <input type="date" id="date-input">
-            <button type="submit" id="add-task-btn">Tambah</button>
-        </form>
-
-        <div class="filters">
-            <button class="filter-btn active" data-filter="all">Semua</button>
-            <button class="filter-btn" data-filter="incomplete">Belum Selesai</button>
-            <button class="filter-btn" data-filter="complete">Selesai</button>
+    <h1>To-Do List</h1>
+    <div class="todo-container">
+        <div class="form-group">
+            <input type="text" id="todo-input" placeholder="Masukkan tugas...">
+            <input type="date" id="todo-date">
+            <button id="add-btn">Tambah</button>
         </div>
 
-        <ul id="tasks">
-            <!-- Daftar tugas akan muncul di sini -->
-        </ul>
+        <div class="form-group">
+            <select id="filter">
+                <option value="all">Semua</option>
+                <option value="completed">Selesai</option>
+                <option value="in-progress">Sedang dikerjakan</option>
+                <option value="not-started">Belum selesai</option>
+            </select>
+        </div>
+
+        <table id="todo-table">
+            <thead>
+                <tr>
+                    <th>Kegiatan</th>
+                    <th>Tanggal</th>
+                    <th>Status</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+            <tbody id="todo-list"></tbody>
+        </table>
     </div>
 
-    <script src="script.js"></script>
+    <script src="/JS/action.js"></script>
 </body>
 
 </html>
