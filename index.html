@@ -3,12 +3,34 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Todo List</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <div class="container">
+        <header>
+            <h1>Todo List</h1>
+        </header>
 
+        <form id="new-task-form">
+            <input type="text" id="task-input" placeholder="Masukkan tugas..." required>
+            <input type="date" id="date-input">
+            <button type="submit" id="add-task-btn">Tambah</button>
+        </form>
+
+        <div class="filters">
+            <button class="filter-btn active" data-filter="all">Semua</button>
+            <button class="filter-btn" data-filter="incomplete">Belum Selesai</button>
+            <button class="filter-btn" data-filter="complete">Selesai</button>
+        </div>
+
+        <ul id="tasks">
+            <!-- Daftar tugas akan muncul di sini -->
+        </ul>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
